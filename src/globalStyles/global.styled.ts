@@ -1,0 +1,11 @@
+import { createGlobalStyle } from 'styled-components';
+import { ResetCss } from './reset.styled';
+
+export const GlobalStyle = createGlobalStyle`
+${ResetCss}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+`;
