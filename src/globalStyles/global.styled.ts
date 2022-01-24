@@ -6,6 +6,7 @@ ${ResetCss}
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color:${({ theme }) => theme.colors.floral_white}
 }
 
 `;
