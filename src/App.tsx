@@ -1,5 +1,12 @@
+import { MainLayout } from './layouts/MainLayout/MainLayout';
+import { ThemeProvider } from './providers/theme';
+
 function App() {
-  return <div className="app"></div>;
+  return (
+    <ThemeProvider>
+      <MainLayout></MainLayout>
+    </ThemeProvider>
+  );
 }
 
 export default App;
