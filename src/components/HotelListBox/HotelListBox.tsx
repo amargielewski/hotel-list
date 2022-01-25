@@ -1,8 +1,12 @@
-import { PropsWithChildren } from 'react';
-import { StyledWrapper } from './HotelListBox.styled';
+import { StyledWrapper, StyledHotelContainer } from './HotelListBox.styled';
+import { HotelListImage } from '../HotelListImage/HotelListImage';
 
-type HotelListBoxProps = PropsWithChildren<{}>;
-
-export const HotelListBox = ({ children }: HotelListBoxProps) => {
-  return <StyledWrapper>{children}</StyledWrapper>;
+export const HotelListBox = () => {
+  return (
+    <StyledWrapper>
+      <StyledHotelContainer>
+        <HotelListImage />
+      </StyledHotelContainer>
+    </StyledWrapper>
+  );
 };
