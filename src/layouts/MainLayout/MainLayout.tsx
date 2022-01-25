@@ -10,7 +10,6 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     <>
       <Header />
       <MainLayoutWrapper>{children}</MainLayoutWrapper>
-      <Footer />
     </>
   );
 };

@@ -7,6 +7,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 
   ::after {
     position: absolute;
