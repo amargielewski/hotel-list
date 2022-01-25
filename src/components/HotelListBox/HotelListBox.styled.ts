@@ -30,3 +30,8 @@ export const StyledHotelNameText = styled.p`
   font-size: 24px;
   font-weight: 400;
 `;
+
+export const StyledRatingWrapper = styled.div`
+  font-size: 30px;
+  margin-left: auto;
+`;
