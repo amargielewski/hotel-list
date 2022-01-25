@@ -22,7 +22,6 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderLogo = styled.h2`
   font-size: 32px;
-  color: ${({ theme }) => theme.colors.rasin_black};
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 4px;
