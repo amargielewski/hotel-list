@@ -6,13 +6,13 @@ import {
   StyledHotelNameText,
   StyledRatingWrapper
 } from './HotelListBox.styled';
-import Rating from 'react-rating';
+import { Rating } from 'react-simple-star-rating';
 import { StarIcon } from '../Icons/StarIcon';
 import { HotelRoom } from '../HotelRoom/HotelRoom';
 import { ImageSlider } from '../ImageSlider/ImageSlider';
 import { Hotels } from '../../types/hotels';
 
-export const HotelListBox = ({ name, address1, address2 }: Hotels) => {
+export const HotelListBox = ({ name, address1, address2 }: any) => {
   return (
     <StyledWrapper>
       <StyledHotelContainer>
@@ -25,9 +25,11 @@ export const HotelListBox = ({ name, address1, address2 }: Hotels) => {
 
         <StyledRatingWrapper>
           <Rating
-            emptySymbol={<StarIcon color={'lightgray'} />}
-            fullSymbol={<StarIcon color={'gold'} />}
-            fractions={2}
+            ratingValue={0}
+            allowHalfIcon
+            emptyIcon={<StarIcon color="lighray" />}
+            fullIcon={<StarIcon color="#ffbc0b" />}
+            size={20}
           />
         </StyledRatingWrapper>
       </StyledHotelContainer>

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { apiService } from '../services/api';
+import { Hotels } from '../types/hotels';
 
 export const getHotels = () => apiService.get('/hotels?collection-id=OBMNG');
 
 export const useHotels = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Hotels[] | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
