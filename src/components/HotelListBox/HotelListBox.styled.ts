@@ -4,9 +4,9 @@ export const StyledWrapper = styled.div`
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid ${({ theme }) => theme.colors.flame};
   border-radius: 10px;
   margin-top: 50px;
+  border: 1px solid ${({ theme }) => theme.colors.flame};
 `;
 
 export const StyledHotelContainer = styled.div`

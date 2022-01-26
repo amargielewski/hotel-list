@@ -6,16 +6,16 @@ import {
   StyledHotelNameText,
   StyledRatingWrapper
 } from './HotelListBox.styled';
-import { HotelListImage } from '../HotelListImage/HotelListImage';
 import Rating from 'react-rating';
 import { StarIcon } from '../Icons/StarIcon';
 import { HotelRoom } from '../HotelRoom/HotelRoom';
+import { ImageSlider } from '../ImageSlider/ImageSlider';
 
 export const HotelListBox = () => {
   return (
     <StyledWrapper>
       <StyledHotelContainer>
-        <HotelListImage />
+        <ImageSlider />
         <StyledHotelInfoContainer>
           <StyledHotelNameText>Hotel Name</StyledHotelNameText>
           <StyledInfoAddressText>Addres 1</StyledInfoAddressText>
