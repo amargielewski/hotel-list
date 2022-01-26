@@ -67,6 +67,7 @@ export const StyledContactTelephoneText = styled.p`
 
 export const StyledInfoWrapper = styled.div`
   display: flex;
+
   flex-direction: column;
   gap: 20px 0;
 `;
@@ -75,4 +76,13 @@ export const StyledSingleContactBox = styled.div`
   display: flex;
   align-items: center;
   gap: 0 10px;
+`;
+
+export const StyledDescriptionContainer = styled.div`
+  max-width: 300px;
+`;
+
+export const StyledDescriptionText = styled.p`
+  font-size: 16px;
+  line-height: 20px;
 `;

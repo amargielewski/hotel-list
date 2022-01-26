@@ -40,7 +40,7 @@ export const StyledRightButton = styled.button`
 `;
 
 export const StyledImage = styled.img`
-  width: 100%;
+  width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;

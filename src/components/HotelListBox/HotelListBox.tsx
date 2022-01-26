@@ -12,7 +12,9 @@ import {
   StyledContactTelephoneText,
   StyledContactEmailText,
   StyledInfoWrapper,
-  StyledSingleContactBox
+  StyledSingleContactBox,
+  StyledDescriptionContainer,
+  StyledDescriptionText
 } from './HotelListBox.styled';
 import { Rating } from 'react-simple-star-rating';
 import { StarIcon } from '../Icons/StarIcon';
@@ -31,7 +33,8 @@ export const HotelListBox = ({
   starRating,
   images,
   telephone,
-  email
+  email,
+  description
 }: Hotels) => {
   return (
     <StyledWrapper>
@@ -62,6 +65,9 @@ export const HotelListBox = ({
             </StyledSingleContactBox>
           </StyledHotelContactContainer>
         </StyledInfoWrapper>
+        <StyledDescriptionContainer>
+          <StyledDescriptionText>{description}</StyledDescriptionText>
+        </StyledDescriptionContainer>
 
         <StyledRatingWrapper>
           <Rating
