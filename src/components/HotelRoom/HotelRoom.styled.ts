@@ -49,4 +49,5 @@ export const StyledRoomFacilitiesTitle = styled.p`
 export const StyledRoomFacilitiesItem = styled.p`
   font-weight: 300;
   font-size: 16px;
+  padding: 0 5px;
 `;
