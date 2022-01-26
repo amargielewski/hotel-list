@@ -10,16 +10,17 @@ import Rating from 'react-rating';
 import { StarIcon } from '../Icons/StarIcon';
 import { HotelRoom } from '../HotelRoom/HotelRoom';
 import { ImageSlider } from '../ImageSlider/ImageSlider';
+import { Hotels } from '../../types/hotels';
 
-export const HotelListBox = () => {
+export const HotelListBox = ({ name, address1, address2 }: Hotels) => {
   return (
     <StyledWrapper>
       <StyledHotelContainer>
         <ImageSlider />
         <StyledHotelInfoContainer>
-          <StyledHotelNameText>Hotel Name</StyledHotelNameText>
-          <StyledInfoAddressText>Addres 1</StyledInfoAddressText>
-          <StyledInfoAddressText>Addres 2</StyledInfoAddressText>
+          <StyledHotelNameText>{name}</StyledHotelNameText>
+          <StyledInfoAddressText>{address1}</StyledInfoAddressText>
+          {address2 && <StyledInfoAddressText>Addres 2</StyledInfoAddressText>}
         </StyledHotelInfoContainer>
 
         <StyledRatingWrapper>
