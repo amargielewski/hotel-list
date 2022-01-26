@@ -9,6 +9,7 @@ import {
 import { HotelListImage } from '../HotelListImage/HotelListImage';
 import Rating from 'react-rating';
 import { StarIcon } from '../Icons/StarIcon';
+import { HotelRoom } from '../HotelRoom/HotelRoom';
 
 export const HotelListBox = () => {
   return (
@@ -29,6 +30,9 @@ export const HotelListBox = () => {
           />
         </StyledRatingWrapper>
       </StyledHotelContainer>
+      <HotelRoom />
+      <HotelRoom />
+      <HotelRoom />
     </StyledWrapper>
   );
 };

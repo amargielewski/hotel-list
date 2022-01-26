@@ -4,15 +4,15 @@ export const StyledWrapper = styled.div`
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  height: 400px;
-  border: 1px solid ${({ theme }) => theme.colors.celtic_blue};
+  border: 1px solid ${({ theme }) => theme.colors.flame};
   border-radius: 10px;
-  padding: 15px;
+  margin-top: 50px;
 `;
 
 export const StyledHotelContainer = styled.div`
   display: flex;
   gap: 0 20px;
+  padding: 15px;
 `;
 
 export const StyledHotelInfoContainer = styled.div`
@@ -28,7 +28,7 @@ export const StyledInfoAddressText = styled.p`
 
 export const StyledHotelNameText = styled.p`
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 export const StyledRatingWrapper = styled.div`
