@@ -1,15 +1,13 @@
 import { FilterBox } from './components/FilterBox/FilterBox';
-import { HotelListBox } from './components/HotelListBox/HotelListBox';
 import { MainLayout } from './layouts/MainLayout/MainLayout';
+import { HotelPage } from './pages/HotelPage';
 import { ThemeProvider } from './providers/theme';
-
 function App() {
   return (
     <ThemeProvider>
       <MainLayout>
         <FilterBox />
-        <HotelListBox />
-        {/* <HotelListBox /> */}
+        <HotelPage />
       </MainLayout>
     </ThemeProvider>
   );

@@ -17,8 +17,10 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 3px;
+  cursor: pointer;
   :disabled {
     opacity: 0.3;
+    cursor: auto;
   }
 `;
 
