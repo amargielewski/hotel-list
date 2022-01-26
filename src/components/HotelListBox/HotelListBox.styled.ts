@@ -22,7 +22,7 @@ export const StyledHotelInfoContainer = styled.div`
 `;
 
 export const StyledInfoAddressText = styled.p`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
 `;
 
@@ -34,4 +34,45 @@ export const StyledHotelNameText = styled.p`
 export const StyledRatingWrapper = styled.div`
   font-size: 30px;
   margin-left: auto;
+`;
+
+export const StyledCountryTownContainer = styled.div`
+  display: flex;
+  gap: 0 10px;
+`;
+export const StyledCountryName = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+`;
+export const StyledTownName = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+`;
+
+export const StyledHotelContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+`;
+
+export const StyledContactEmailText = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+`;
+export const StyledContactTelephoneText = styled.p`
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 3px;
+`;
+
+export const StyledInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+`;
+
+export const StyledSingleContactBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
 `;

@@ -9,23 +9,17 @@ import {
   StyledImage
 } from './ImageSlider.styled';
 
-const Images = [
-  {
-    url: 'https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/Hotel1.JPG'
-  },
-  {
-    url: 'https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/hotel4.jpg'
-  },
-  {
-    url: 'https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/room5.jpg'
-  }
-];
+import { Image } from '../../types/hotels';
 
-export const ImageSlider = () => {
+export type ImageSliderProps = {
+  images: Image[];
+};
+
+export const ImageSlider = ({ images }: ImageSliderProps) => {
   const [current, setCurrent] = useState<number>(0);
-  const length = Images.length;
+  const length = images.length;
 
-  if (!Array.isArray(Images) || Images.length <= 0) {
+  if (!Array.isArray(images) || length <= 0) {
     return null;
   }
 
@@ -38,10 +32,12 @@ export const ImageSlider = () => {
 
   return (
     <StyledWrapper>
-      <StyledLeftButton onClick={prevSlide}>
-        <LeftArrowIcon />
-      </StyledLeftButton>
-      {Images.map((slide, index) => {
+      {length !== 1 && (
+        <StyledLeftButton onClick={prevSlide}>
+          <LeftArrowIcon />
+        </StyledLeftButton>
+      )}
+      {images.map((slide, index) => {
         return (
           <div
             className={index === current ? 'slide-active' : 'slide'}
@@ -51,9 +47,11 @@ export const ImageSlider = () => {
           </div>
         );
       })}
-      <StyledRightButton onClick={nextSlide}>
-        <RightArrowIcon />
-      </StyledRightButton>
+      {length !== 1 && (
+        <StyledRightButton onClick={nextSlide}>
+          <RightArrowIcon />
+        </StyledRightButton>
+      )}
     </StyledWrapper>
   );
 };

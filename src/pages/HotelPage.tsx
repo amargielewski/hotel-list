@@ -1,3 +1,4 @@
+import React from 'react';
 import { useHotels } from '../api/getHotels';
 import { HotelListBox } from '../components/HotelListBox/HotelListBox';
 import { StyledWrapper } from './HotelPage.styled';
@@ -10,8 +11,10 @@ export const HotelPage = () => {
   return (
     <StyledWrapper>
       {data &&
-        data?.map(({ name, address1, address2 }) => (
-          <HotelListBox name={name} address1={address1} address2={address2} />
+        data?.map((hotel) => (
+          <React.Fragment key={hotel.id}>
+            <HotelListBox {...hotel} />
+          </React.Fragment>
         ))}
     </StyledWrapper>
   );

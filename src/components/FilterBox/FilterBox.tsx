@@ -8,7 +8,6 @@ export const FilterBox = () => {
       <RatingContainer>
         <Rating
           ratingValue={0}
-          allowHalfIcon
           emptyIcon={<StarIcon color="lighray" />}
           fullIcon={<StarIcon color="#ffbc0b" />}
         />
