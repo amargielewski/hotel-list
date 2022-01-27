@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
@@ -11,7 +11,6 @@ export const StyledWrapper = styled.div`
 
 export const StyledHotelContainer = styled.div`
   display: flex;
-  align-items: flex-start;
   gap: 0 20px;
   padding: 15px;
 `;
@@ -33,8 +32,11 @@ export const StyledHotelNameText = styled.p`
 `;
 
 export const StyledRatingWrapper = styled.div`
+  align-self: flex-end;
   font-size: 30px;
-  margin-left: auto;
+  @media (max-width: 1000px) {
+    font-size: 25px;
+  }
 `;
 
 export const StyledCountryTownContainer = styled.div`
@@ -68,9 +70,14 @@ export const StyledContactTelephoneText = styled.p`
 
 export const StyledInfoWrapper = styled.div`
   display: flex;
+  gap: 0 10px;
 
-  flex-direction: column;
-  gap: 20px 0;
+  flex: 1;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 10px 0;
+  }
 `;
 
 export const StyledSingleContactBox = styled.div`
@@ -80,7 +87,7 @@ export const StyledSingleContactBox = styled.div`
 `;
 
 export const StyledDescriptionContainer = styled.div`
-  max-width: 300px;
+  margin-top: 20px;
 `;
 
 export const StyledDescriptionText = styled.p`
@@ -113,4 +120,17 @@ export const StyledHotelRoomsContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.flame};
     border-radius: 10px;
   }
+`;
+
+export const StyledInfoContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+`;
+
+export const StyledDescriptionRatingContainer = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
 `;

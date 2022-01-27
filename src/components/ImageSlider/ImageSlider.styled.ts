@@ -5,6 +5,9 @@ export const StyledWrapper = styled.div`
   align-items: center;
   position: relative;
   width: 200px;
+  @media (max-width: 750px) {
+    width: 150px;
+  }
 `;
 
 export const defaulutArrowButton = css`
@@ -28,6 +31,11 @@ export const defaulutArrowButton = css`
   :hover {
     background: ${({ theme }) => theme.colors.ligthgray};
   }
+
+  @media (max-width: 750px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export const StyledLeftButton = styled.button`
@@ -44,4 +52,9 @@ export const StyledImage = styled.img`
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+
+  @media (max-width: 750px) {
+    width: 150px;
+    height: 150px;
+  }
 `;

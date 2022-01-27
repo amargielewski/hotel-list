@@ -3,6 +3,7 @@ export const LeftArrowIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
+    viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
     strokeWidth={2}
@@ -10,6 +11,7 @@ export const LeftArrowIcon = () => (
     strokeLinejoin="round"
     className="feather feather-arrow-left"
   >
-    <path d="M19 12H5M12 19l-7-7 7-7" />
+    <line x1={19} y1={12} x2={5} y2={12} />
+    <polyline points="12 19 5 12 12 5" />
   </svg>
 );
