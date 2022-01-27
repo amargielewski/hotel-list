@@ -1,27 +1,19 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
+  margin-top: 50px;
   width: 100%;
   height: 100px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  ::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    top: 0;
-    height: 1px;
-    /* background-color: ${({ theme }) => theme.colors.flame}; */
-    background-color: lightgray;
-  }
+  background-color: ${({ theme }) => theme.colors.rasin_black};
 `;
 
-export const HeaderLogo = styled.h2`
+export const FooterLogo = styled.h2`
   font-size: 32px;
-  color: ${({ theme }) => theme.colors.rasin_black};
+  color: ${({ theme }) => theme.colors.floral_white};
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 4px;

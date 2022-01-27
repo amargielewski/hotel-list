@@ -1,4 +1,5 @@
-import { useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useCallback, useEffect, useState } from 'react';
 import {
   StyledWrapper,
   StyledButton,
@@ -10,10 +11,15 @@ export type FilterNameType = 'children' | 'adults';
 
 export type FilterCounterProps = {
   name: FilterNameType;
+  handleChange: (value: number) => void;
 };
 
-export const FilterCounter = ({ name }: FilterCounterProps) => {
+export const FilterCounter = ({ name, handleChange }: FilterCounterProps) => {
   const [counterValue, setCounterValue] = useState(0);
+
+  useEffect(() => {
+    handleChange(counterValue);
+  }, [counterValue]);
 
   return (
     <StyledWrapper>
