@@ -1,12 +1,11 @@
 import React from 'react';
+import { useHotelsDetails } from '../api/getHotelDetails';
 import { useHotels } from '../api/getHotels';
 import { HotelListBox } from '../components/HotelListBox/HotelListBox';
 import { StyledWrapper } from './HotelPage.styled';
 
 export const HotelPage = () => {
   const { data, isLoading, error } = useHotels();
-
-  console.log(data, isLoading, error);
 
   return (
     <StyledWrapper>

@@ -15,7 +15,6 @@ export const HeaderWrapper = styled.div`
     width: 100%;
     top: 100%;
     height: 1px;
-    /* background-color: ${({ theme }) => theme.colors.flame}; */
     background-color: lightgray;
   }
 `;

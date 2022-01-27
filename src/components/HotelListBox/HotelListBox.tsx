@@ -14,7 +14,9 @@ import {
   StyledInfoWrapper,
   StyledSingleContactBox,
   StyledDescriptionContainer,
-  StyledDescriptionText
+  StyledDescriptionText,
+  StyledHotelRoomsContainer,
+  StyledDescriptionTitle
 } from './HotelListBox.styled';
 import { Rating } from 'react-simple-star-rating';
 import { StarIcon } from '../Icons/StarIcon';
@@ -23,6 +25,8 @@ import { PhoneIcon } from '../Icons/PhoneIcon';
 import { HotelRoom } from '../HotelRoom/HotelRoom';
 import { ImageSlider } from '../ImageSlider/ImageSlider';
 import { Hotels } from '../../types/hotels';
+import { useHotelsDetails } from '../../api/getHotelDetails';
+import React from 'react';
 
 export const HotelListBox = ({
   name,
@@ -34,8 +38,11 @@ export const HotelListBox = ({
   images,
   telephone,
   email,
-  description
+  description,
+  id
 }: Hotels) => {
+  const { data, isLoading, error } = useHotelsDetails({ id });
+
   return (
     <StyledWrapper>
       <StyledHotelContainer>
@@ -66,6 +73,7 @@ export const HotelListBox = ({
           </StyledHotelContactContainer>
         </StyledInfoWrapper>
         <StyledDescriptionContainer>
+          <StyledDescriptionTitle>Description:</StyledDescriptionTitle>
           <StyledDescriptionText>{description}</StyledDescriptionText>
         </StyledDescriptionContainer>
 
@@ -80,9 +88,14 @@ export const HotelListBox = ({
           />
         </StyledRatingWrapper>
       </StyledHotelContainer>
-      <HotelRoom />
-      <HotelRoom />
-      <HotelRoom />
+      <StyledHotelRoomsContainer>
+        {data &&
+          data?.rooms.map((room) => (
+            <React.Fragment key={room.id}>
+              <HotelRoom {...room} />
+            </React.Fragment>
+          ))}
+      </StyledHotelRoomsContainer>
     </StyledWrapper>
   );
 };
