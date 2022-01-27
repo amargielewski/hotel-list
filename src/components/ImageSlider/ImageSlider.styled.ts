@@ -5,8 +5,9 @@ export const StyledWrapper = styled.div`
   align-items: center;
   position: relative;
   width: 200px;
-  @media (max-width: 750px) {
+  @media (max-width: 500px) {
     width: 150px;
+    height: 150px;
   }
 `;
 
@@ -32,7 +33,7 @@ export const defaulutArrowButton = css`
     background: ${({ theme }) => theme.colors.ligthgray};
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 500px) {
     width: 30px;
     height: 30px;
   }
@@ -53,7 +54,7 @@ export const StyledImage = styled.img`
   object-fit: cover;
   border-radius: 10px;
 
-  @media (max-width: 750px) {
+  @media (max-width: 500px) {
     width: 150px;
     height: 150px;
   }

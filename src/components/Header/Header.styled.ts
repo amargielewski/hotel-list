@@ -24,4 +24,8 @@ export const HeaderLogo = styled.h2`
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 4px;
+
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
 `;

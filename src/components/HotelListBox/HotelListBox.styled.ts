@@ -6,19 +6,25 @@ export const StyledWrapper = styled.div`
   margin: 0 auto;
   border-radius: 10px;
   margin-top: 50px;
-  border: 1px solid ${({ theme }) => theme.colors.flame};
+  border: 1px solid ${({ theme }) => theme.colors.ligthgray};
 `;
 
 export const StyledHotelContainer = styled.div`
   display: flex;
   gap: 0 20px;
   padding: 15px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  flex-direction: column;
 `;
 
 export const StyledHotelInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px 0;
+  margin-top: 10px;
+  @media (max-width: 400px) {
+    align-items: center;
+  }
 `;
 
 export const StyledInfoAddressText = styled.p`
@@ -32,15 +38,17 @@ export const StyledHotelNameText = styled.p`
 `;
 
 export const StyledRatingWrapper = styled.div`
-  align-self: flex-end;
+  margin-top: 20px;
   font-size: 30px;
-  @media (max-width: 1000px) {
-    font-size: 25px;
+
+  @media (max-width: 400px) {
+    align-self: center;
   }
 `;
 
 export const StyledCountryTownContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 0 10px;
 `;
 export const StyledCountryName = styled.p`
@@ -56,27 +64,41 @@ export const StyledHotelContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px 0;
+
+  @media (max-width: 400px) {
+    align-items: center;
+  }
 `;
 
 export const StyledContactEmailText = styled.p`
   font-weight: 400;
   font-size: 14px;
+
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
 `;
 export const StyledContactTelephoneText = styled.p`
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 3px;
+
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
 `;
 
 export const StyledInfoWrapper = styled.div`
   display: flex;
   gap: 0 10px;
 
-  flex: 1;
-
   @media (max-width: 1000px) {
+    gap: 0 20px;
+  }
+
+  @media (max-width: 400px) {
     flex-direction: column;
-    gap: 10px 0;
+    align-items: center;
   }
 `;
 
@@ -110,12 +132,10 @@ export const StyledHotelRoomsContainer = styled.div`
     border-radius: 10px;
   }
 
-  /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 10px;
   }
 
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background-color: ${({ theme }) => theme.colors.flame};
     border-radius: 10px;
@@ -129,7 +149,6 @@ export const StyledInfoContactContainer = styled.div`
 `;
 
 export const StyledDescriptionRatingContainer = styled.div`
-  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 20px 0;

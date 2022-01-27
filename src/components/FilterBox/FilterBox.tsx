@@ -1,4 +1,8 @@
-import { StyledWrapper, RatingContainer } from './FilterBox.styled';
+import {
+  StyledWrapper,
+  RatingContainer,
+  FilterCounterContainer
+} from './FilterBox.styled';
 import { StarIcon } from '../Icons/StarIcon';
 import { Rating } from 'react-simple-star-rating';
 import { FilterCounter } from './FilterCounter';
@@ -12,8 +16,10 @@ export const FilterBox = () => {
           fullIcon={<StarIcon color="#ffbc0b" />}
         />
       </RatingContainer>
-      <FilterCounter name="adults" />
-      <FilterCounter name="children" />
+      <FilterCounterContainer>
+        <FilterCounter name="adults" />
+        <FilterCounter name="children" />
+      </FilterCounterContainer>
     </StyledWrapper>
   );
 };
