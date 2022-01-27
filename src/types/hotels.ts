@@ -1,4 +1,4 @@
-export interface Hotels {
+export type Hotels = {
   id: string;
   name: string;
   description: string;
@@ -18,19 +18,19 @@ export interface Hotels {
   checkOutHours: string;
   checkOutMinutes: string;
   position?: Position;
-}
+};
 
-export interface Facility {
+export type Facility = {
   code: string;
-}
+};
 
-export interface Image {
+export type Image = {
   url: string;
   alt?: string;
-}
+};
 
-export interface Position {
+export type Position = {
   latitude: string;
   longitude: string;
   timezone: string;
-}
+};
