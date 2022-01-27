@@ -17,6 +17,11 @@ export const StyledWrapper = styled.div`
 export const StyledContainerWrapper = styled.div`
   padding: 15px;
   display: flex;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    gap: 20px 0;
+  }
 `;
 
 export const StyledInfoContainer = styled.div`
@@ -24,6 +29,11 @@ export const StyledInfoContainer = styled.div`
   flex-direction: column;
   gap: 20px 0;
   flex: 1;
+
+  @media (max-width: 750px) {
+    flex-direction: row;
+    gap: 0 20px;
+  }
 `;
 
 export const StyledRoomNameText = styled.p`
@@ -59,12 +69,15 @@ export const StyledRoomFacilitiesContainer = styled.div`
 
 export const StyledDescriptionContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0 10px;
   margin-bottom: 10px;
 `;
 
-export const StyledDescriptionText = styled.p``;
+export const StyledDescriptionText = styled.p`
+  font-size: 16px;
+`;
 
 export const StyledDescriptionTitle = styled.p`
   font-weight: 500;

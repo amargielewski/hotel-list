@@ -16,7 +16,9 @@ import {
   StyledDescriptionContainer,
   StyledDescriptionText,
   StyledHotelRoomsContainer,
-  StyledDescriptionTitle
+  StyledDescriptionTitle,
+  StyledInfoContactContainer,
+  StyledDescriptionRatingContainer
 } from './HotelListBox.styled';
 import { Rating } from 'react-simple-star-rating';
 import { StarIcon } from '../Icons/StarIcon';
@@ -46,47 +48,51 @@ export const HotelListBox = ({
   return (
     <StyledWrapper>
       <StyledHotelContainer>
-        <ImageSlider images={images} />
         <StyledInfoWrapper>
-          <StyledHotelInfoContainer>
-            <StyledHotelNameText>{name}</StyledHotelNameText>
-            <StyledCountryTownContainer>
-              <StyledTownName>{town},</StyledTownName>
-              <StyledCountryName>{country}</StyledCountryName>
-            </StyledCountryTownContainer>
-            <StyledInfoAddressText>{address1}</StyledInfoAddressText>
-            {address2 && (
-              <StyledInfoAddressText>Addres 2</StyledInfoAddressText>
-            )}
-          </StyledHotelInfoContainer>
-          <StyledHotelContactContainer>
-            <StyledSingleContactBox>
-              <MailIcon />
-              <StyledContactEmailText>{email}</StyledContactEmailText>
-            </StyledSingleContactBox>
-            <StyledSingleContactBox>
-              <PhoneIcon />
-              <StyledContactTelephoneText>
-                {telephone}
-              </StyledContactTelephoneText>
-            </StyledSingleContactBox>
-          </StyledHotelContactContainer>
+          <ImageSlider images={images} />
+          <StyledInfoContactContainer>
+            <StyledHotelInfoContainer>
+              <StyledHotelNameText>{name}</StyledHotelNameText>
+              <StyledCountryTownContainer>
+                <StyledTownName>{town},</StyledTownName>
+                <StyledCountryName>{country}</StyledCountryName>
+              </StyledCountryTownContainer>
+              <StyledInfoAddressText>{address1}</StyledInfoAddressText>
+              {address2 && (
+                <StyledInfoAddressText>Addres 2</StyledInfoAddressText>
+              )}
+            </StyledHotelInfoContainer>
+            <StyledHotelContactContainer>
+              <StyledSingleContactBox>
+                <MailIcon />
+                <StyledContactEmailText>{email}</StyledContactEmailText>
+              </StyledSingleContactBox>
+              <StyledSingleContactBox>
+                <PhoneIcon />
+                <StyledContactTelephoneText>
+                  {telephone}
+                </StyledContactTelephoneText>
+              </StyledSingleContactBox>
+            </StyledHotelContactContainer>
+          </StyledInfoContactContainer>
         </StyledInfoWrapper>
-        <StyledDescriptionContainer>
-          <StyledDescriptionTitle>Description:</StyledDescriptionTitle>
-          <StyledDescriptionText>{description}</StyledDescriptionText>
-        </StyledDescriptionContainer>
+        <StyledDescriptionRatingContainer>
+          <StyledRatingWrapper>
+            <Rating
+              ratingValue={0}
+              readonly
+              initialValue={parseFloat(starRating)}
+              emptyIcon={<StarIcon color="lighray" />}
+              fullIcon={<StarIcon color="#ffbc0b" />}
+              size={20}
+            />
+          </StyledRatingWrapper>
 
-        <StyledRatingWrapper>
-          <Rating
-            ratingValue={0}
-            readonly
-            initialValue={parseFloat(starRating)}
-            emptyIcon={<StarIcon color="lighray" />}
-            fullIcon={<StarIcon color="#ffbc0b" />}
-            size={20}
-          />
-        </StyledRatingWrapper>
+          <StyledDescriptionContainer>
+            <StyledDescriptionTitle>Description:</StyledDescriptionTitle>
+            <StyledDescriptionText>{description}</StyledDescriptionText>
+          </StyledDescriptionContainer>
+        </StyledDescriptionRatingContainer>
       </StyledHotelContainer>
       <StyledHotelRoomsContainer>
         {data &&
