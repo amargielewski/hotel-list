@@ -29,11 +29,7 @@ export const StyledInfoContainer = styled.div`
   flex-direction: column;
   gap: 20px 0;
   flex: 1;
-
-  @media (max-width: 750px) {
-    flex-direction: row;
-    gap: 0 20px;
-  }
+  margin-right: 10px;
 `;
 
 export const StyledRoomNameText = styled.p`
@@ -77,6 +73,7 @@ export const StyledDescriptionContainer = styled.div`
 
 export const StyledDescriptionText = styled.p`
   font-size: 16px;
+  line-height: 20px;
 `;
 
 export const StyledDescriptionTitle = styled.p`

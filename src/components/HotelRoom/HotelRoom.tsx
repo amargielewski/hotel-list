@@ -20,7 +20,8 @@ export const HotelRoom = ({
   name,
   occupancy,
   facilities,
-  shortDescription
+  shortDescription,
+  longDescription
 }: Room) => {
   return (
     <StyledWrapper>
@@ -34,10 +35,10 @@ export const HotelRoom = ({
         </StyledInfoContainer>
 
         <StyledContentContainer>
-          {shortDescription && (
+          {longDescription && (
             <StyledDescriptionContainer>
               <StyledDescriptionTitle>Description:</StyledDescriptionTitle>
-              <StyledDescriptionText>{shortDescription}</StyledDescriptionText>
+              <StyledDescriptionText>{longDescription}</StyledDescriptionText>
             </StyledDescriptionContainer>
           )}
           {facilities.length !== 0 && (

@@ -1,7 +1,11 @@
-import { FooterWrapper } from './Footer.styled';
+import { FooterLogo, FooterWrapper } from './Footer.styled';
 
 type FooterProps = {};
 
 export const Footer = (props: FooterProps) => {
-  return <FooterWrapper></FooterWrapper>;
+  return (
+    <FooterWrapper>
+      <FooterLogo>Footer</FooterLogo>
+    </FooterWrapper>
+  );
 };

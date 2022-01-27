@@ -18,7 +18,8 @@ import {
   StyledHotelRoomsContainer,
   StyledDescriptionTitle,
   StyledInfoContactContainer,
-  StyledDescriptionRatingContainer
+  StyledDescriptionRatingContainer,
+  StyledMessage
 } from './HotelListBox.styled';
 import { Rating } from 'react-simple-star-rating';
 import { StarIcon } from '../Icons/StarIcon';
@@ -28,7 +29,8 @@ import { HotelRoom } from '../HotelRoom/HotelRoom';
 import { ImageSlider } from '../ImageSlider/ImageSlider';
 import { Hotels } from '../../types/hotels';
 import { useHotelsDetails } from '../../api/getHotelDetails';
-import React from 'react';
+import React, { useContext } from 'react';
+import { stateContext } from '../../providers/state';
 
 export const HotelListBox = ({
   name,
@@ -44,6 +46,18 @@ export const HotelListBox = ({
   id
 }: Hotels) => {
   const { data, isLoading, error } = useHotelsDetails({ id });
+
+  const { state } = useContext(stateContext);
+
+  const filtredData = data?.rooms.filter((item) => {
+    const adults = state.adults ?? 0;
+    const children = state.children ?? 0;
+
+    return (
+      +item.occupancy.maxAdults >= adults &&
+      +item.occupancy.maxChildren >= children
+    );
+  });
 
   return (
     <StyledWrapper>
@@ -81,7 +95,7 @@ export const HotelListBox = ({
             <Rating
               ratingValue={0}
               readonly
-              initialValue={parseFloat(starRating)}
+              initialValue={+starRating}
               emptyIcon={<StarIcon color="lighray" />}
               fullIcon={<StarIcon color="#ffbc0b" />}
               size={20}
@@ -93,14 +107,19 @@ export const HotelListBox = ({
             <StyledDescriptionText>{description}</StyledDescriptionText>
           </StyledDescriptionContainer>
         </StyledDescriptionRatingContainer>
+        {filtredData?.length === 0 && (
+          <StyledMessage> No rooms matching the criteria</StyledMessage>
+        )}
       </StyledHotelContainer>
+
       <StyledHotelRoomsContainer>
-        {data &&
-          data?.rooms.map((room) => (
-            <React.Fragment key={room.id}>
-              <HotelRoom {...room} />
-            </React.Fragment>
-          ))}
+        {filtredData?.length === 0
+          ? null
+          : filtredData?.map((room) => (
+              <React.Fragment key={room.id}>
+                <HotelRoom {...room} />
+              </React.Fragment>
+            ))}
       </StyledHotelRoomsContainer>
     </StyledWrapper>
   );
