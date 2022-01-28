@@ -33,3 +33,5 @@ export const StyledCounterName = styled.p`
   text-transform: capitalize;
   font-weight: 500;
 `;
+
+export const StyledResetFilterButton = styled.button``;

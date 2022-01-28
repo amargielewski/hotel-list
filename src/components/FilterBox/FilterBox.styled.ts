@@ -23,3 +23,11 @@ export const FilterCounterContainer = styled.div`
     align-items: center;
   }
 `;
+
+export const StyledResetFilterButton = styled.button`
+  margin-left: 20px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid ${({ theme }) => theme.colors.flame};
+  border-radius: 5px;
+`;
