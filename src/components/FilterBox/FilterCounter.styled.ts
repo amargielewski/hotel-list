@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TextMedium } from '../Typography/Typography.styled';
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -24,14 +25,10 @@ export const StyledButton = styled.button`
   }
 `;
 
-export const StyledValue = styled.p`
-  padding: 0 3px;
+export const StyledValue = styled(TextMedium)`
   font-weight: 600;
 `;
 
-export const StyledCounterName = styled.p`
+export const StyledCounterName = styled(TextMedium)`
   text-transform: capitalize;
-  font-weight: 500;
 `;
-
-export const StyledResetFilterButton = styled.button``;

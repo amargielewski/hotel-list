@@ -1,43 +1,41 @@
 import React from 'react';
 import { Room } from '../../types/hotelDetails';
+import {
+  HeaderSmall,
+  TextLarge,
+  TextSmall
+} from '../Typography/Typography.styled';
 
 import {
   StyledWrapper,
   StyledInfoContainer,
-  StyledRoomNameText,
-  StyledRoomInfoText,
   StyledContainerWrapper,
   StyledContentContainer,
   StyledRoomFacilitiesTitle,
-  StyledRoomFacilitiesItem,
   StyledRoomFacilitiesContainer,
   StyledDescriptionContainer,
-  StyledDescriptionText,
-  StyledDescriptionTitle
+  StyledDescriptionText
 } from './HotelRoom.styled';
 
 export const HotelRoom = ({
   name,
   occupancy,
   facilities,
-  shortDescription,
   longDescription
 }: Room) => {
   return (
     <StyledWrapper>
       <StyledContainerWrapper>
         <StyledInfoContainer>
-          <StyledRoomNameText>{name}</StyledRoomNameText>
-          <StyledRoomInfoText>Adult: {occupancy.maxAdults}</StyledRoomInfoText>
-          <StyledRoomInfoText>
-            Children: {occupancy.maxChildren}
-          </StyledRoomInfoText>
+          <HeaderSmall>{name}</HeaderSmall>
+          <TextLarge>Adult: {occupancy.maxAdults}</TextLarge>
+          <TextLarge>Children: {occupancy.maxChildren}</TextLarge>
         </StyledInfoContainer>
 
         <StyledContentContainer>
           {longDescription && (
             <StyledDescriptionContainer>
-              <StyledDescriptionTitle>Description:</StyledDescriptionTitle>
+              <HeaderSmall>Description:</HeaderSmall>
               <StyledDescriptionText>{longDescription}</StyledDescriptionText>
             </StyledDescriptionContainer>
           )}
@@ -45,9 +43,7 @@ export const HotelRoom = ({
             <StyledRoomFacilitiesContainer>
               <StyledRoomFacilitiesTitle>Facilities:</StyledRoomFacilitiesTitle>
               {facilities.map(({ name, code }) => (
-                <StyledRoomFacilitiesItem key={code}>
-                  {name},
-                </StyledRoomFacilitiesItem>
+                <TextSmall key={code}>{name},</TextSmall>
               ))}
             </StyledRoomFacilitiesContainer>
           )}

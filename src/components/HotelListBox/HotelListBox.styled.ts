@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-
+import {
+  HeaderMedium,
+  TextLarge,
+  TextMedium,
+  TextSmall
+} from '../Typography/Typography.styled';
 export const StyledWrapper = styled.div`
   max-width: 1200px;
   width: 100%;
@@ -27,16 +32,6 @@ export const StyledHotelInfoContainer = styled.div`
   }
 `;
 
-export const StyledInfoAddressText = styled.p`
-  font-weight: 400;
-  font-size: 16px;
-`;
-
-export const StyledHotelNameText = styled.p`
-  font-size: 24px;
-  font-weight: 500;
-`;
-
 export const StyledRatingWrapper = styled.div`
   margin-top: 20px;
   font-size: 30px;
@@ -51,14 +46,6 @@ export const StyledCountryTownContainer = styled.div`
   flex-wrap: wrap;
   gap: 0 10px;
 `;
-export const StyledCountryName = styled.p`
-  font-size: 18px;
-  font-weight: 400;
-`;
-export const StyledTownName = styled.p`
-  font-size: 18px;
-  font-weight: 400;
-`;
 
 export const StyledHotelContactContainer = styled.div`
   display: flex;
@@ -70,22 +57,13 @@ export const StyledHotelContactContainer = styled.div`
   }
 `;
 
-export const StyledContactEmailText = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-
+export const StyledContactEmailText = styled(TextSmall)`
   @media (max-width: 500px) {
-    font-size: 10px;
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
   }
 `;
-export const StyledContactTelephoneText = styled.p`
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 3px;
-
-  @media (max-width: 500px) {
-    font-size: 10px;
-  }
+export const StyledContactTelephoneText = styled(TextSmall)`
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
 `;
 
 export const StyledInfoWrapper = styled.div`
@@ -112,14 +90,12 @@ export const StyledDescriptionContainer = styled.div`
   margin-top: 20px;
 `;
 
-export const StyledDescriptionText = styled.p`
-  font-size: 16px;
+export const StyledDescriptionText = styled(TextMedium)`
   line-height: 20px;
 `;
 
-export const StyledDescriptionTitle = styled.p`
-  font-weight: 500;
-  font-size: 18px;
+export const StyledDescriptionTitle = styled(TextLarge)`
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
 `;
 
 export const StyledHotelRoomsContainer = styled.div`
@@ -155,13 +131,11 @@ export const StyledDescriptionRatingContainer = styled.div`
   gap: 20px 0;
 `;
 
-export const StyledMessage = styled.p`
+export const StyledMessage = styled(HeaderMedium)`
   padding: 20px 0;
-  font-weight: 500;
-  font-size: 24px;
   text-align: center;
 
   @media (max-width: 500px) {
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.fontSizes.l}px;
   }
 `;

@@ -22,6 +22,10 @@ export const FilterBox = () => {
   const handleChildrenChange = (childs: number) => {
     dispatch({ type: StateActionKind.UPDATE_CHILDREN, payload: childs });
   };
+
+  const handleResetChange = () => {
+    dispatch({ type: StateActionKind.RESET_STATE });
+  };
   return (
     <StyledWrapper>
       <RatingContainer>
@@ -37,7 +41,9 @@ export const FilterBox = () => {
         <FilterCounter name="adults" handleChange={handleAdultsChange} />
         <FilterCounter name="children" handleChange={handleChildrenChange} />
       </FilterCounterContainer>
-      <StyledResetFilterButton>Reset</StyledResetFilterButton>
+      <StyledResetFilterButton onClick={handleResetChange}>
+        Reset
+      </StyledResetFilterButton>
     </StyledWrapper>
   );
 };
