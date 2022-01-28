@@ -1,7 +1,8 @@
 import {
   StyledWrapper,
   RatingContainer,
-  FilterCounterContainer
+  FilterCounterContainer,
+  StyledResetFilterButton
 } from './FilterBox.styled';
 import { StarIcon } from '../Icons/StarIcon';
 import { Rating } from 'react-simple-star-rating';
@@ -36,6 +37,7 @@ export const FilterBox = () => {
         <FilterCounter name="adults" handleChange={handleAdultsChange} />
         <FilterCounter name="children" handleChange={handleChildrenChange} />
       </FilterCounterContainer>
+      <StyledResetFilterButton>Reset</StyledResetFilterButton>
     </StyledWrapper>
   );
 };
