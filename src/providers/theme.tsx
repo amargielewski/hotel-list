@@ -11,6 +11,20 @@ export const theme = {
     rasin_black: '#171a21',
     celtic_blue: '#226ce0',
     ligthgray: '#d3d3d3'
+  },
+  fontSizes: {
+    xs: 10,
+    s: 14,
+    m: 16,
+    l: 18,
+    xl: 24,
+    xxl: 32
+  },
+  fontWeight: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 600
   }
 };
 

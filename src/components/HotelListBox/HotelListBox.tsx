@@ -2,12 +2,8 @@ import {
   StyledWrapper,
   StyledHotelContainer,
   StyledHotelInfoContainer,
-  StyledInfoAddressText,
-  StyledHotelNameText,
   StyledRatingWrapper,
   StyledCountryTownContainer,
-  StyledCountryName,
-  StyledTownName,
   StyledHotelContactContainer,
   StyledContactTelephoneText,
   StyledContactEmailText,
@@ -21,6 +17,13 @@ import {
   StyledDescriptionRatingContainer,
   StyledMessage
 } from './HotelListBox.styled';
+
+import {
+  TextMedium,
+  TextLarge,
+  HeaderMedium
+} from '../Typography/Typography.styled';
+
 import { Rating } from 'react-simple-star-rating';
 import { StarIcon } from '../Icons/StarIcon';
 import { MailIcon } from '../Icons/MailIcon';
@@ -66,15 +69,13 @@ export const HotelListBox = ({
           <ImageSlider images={images} />
           <StyledInfoContactContainer>
             <StyledHotelInfoContainer>
-              <StyledHotelNameText>{name}</StyledHotelNameText>
+              <HeaderMedium>{name}</HeaderMedium>
               <StyledCountryTownContainer>
-                <StyledTownName>{town},</StyledTownName>
-                <StyledCountryName>{country}</StyledCountryName>
+                <TextLarge>{town},</TextLarge>
+                <TextLarge>{country}</TextLarge>
               </StyledCountryTownContainer>
-              <StyledInfoAddressText>{address1}</StyledInfoAddressText>
-              {address2 && (
-                <StyledInfoAddressText>Addres 2</StyledInfoAddressText>
-              )}
+              <TextMedium>{address1}</TextMedium>
+              {address2 && <TextMedium>{address2}</TextMedium>}
             </StyledHotelInfoContainer>
             <StyledHotelContactContainer>
               <StyledSingleContactBox>

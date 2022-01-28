@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TextMedium, HeaderSmall } from '../Typography/Typography.styled';
 
 export const StyledWrapper = styled.div`
   width: 100%;
@@ -32,28 +33,12 @@ export const StyledInfoContainer = styled.div`
   margin-right: 10px;
 `;
 
-export const StyledRoomNameText = styled.p`
-  font-weight: 500;
-  font-size: 20px;
-`;
-export const StyledRoomInfoText = styled.p`
-  font-weight: 400;
-  font-size: 18px;
-`;
-
 export const StyledContentContainer = styled.div`
   flex: 3;
 `;
 
-export const StyledRoomFacilitiesTitle = styled.p`
-  font-weight: 500;
-  font-size: 18px;
+export const StyledRoomFacilitiesTitle = styled(HeaderSmall)`
   padding-right: 10px;
-`;
-
-export const StyledRoomFacilitiesItem = styled.p`
-  font-weight: 400;
-  font-size: 14px;
 `;
 
 export const StyledRoomFacilitiesContainer = styled.div`
@@ -71,12 +56,6 @@ export const StyledDescriptionContainer = styled.div`
   margin-bottom: 10px;
 `;
 
-export const StyledDescriptionText = styled.p`
-  font-size: 16px;
+export const StyledDescriptionText = styled(TextMedium)`
   line-height: 20px;
-`;
-
-export const StyledDescriptionTitle = styled.p`
-  font-weight: 500;
-  font-size: 18px;
 `;

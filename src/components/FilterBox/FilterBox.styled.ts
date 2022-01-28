@@ -26,8 +26,10 @@ export const FilterCounterContainer = styled.div`
 
 export const StyledResetFilterButton = styled.button`
   margin-left: 20px;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSizes.l}px;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.flame};
   border-radius: 5px;
+  cursor: pointer;
 `;
