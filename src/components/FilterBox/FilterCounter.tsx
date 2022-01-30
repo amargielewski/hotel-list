@@ -12,30 +12,24 @@ export type FilterNameType = 'children' | 'adults';
 export type FilterCounterProps = {
   name: FilterNameType;
   handleChange: (value: number) => void;
+  value: number;
 };
-
-export const FilterCounter = ({ name, handleChange }: FilterCounterProps) => {
-  const [counterValue, setCounterValue] = useState(0);
-
-  useEffect(() => {
-    handleChange(counterValue);
-  }, [counterValue]);
-
+export const FilterCounter = ({
+  name,
+  handleChange,
+  value
+}: FilterCounterProps) => {
   return (
     <StyledWrapper>
       <StyledCounterName>{name}:</StyledCounterName>
 
-      {counterValue > 0 ? (
-        <StyledButton onClick={() => setCounterValue(counterValue - 1)}>
-          -
-        </StyledButton>
+      {value > 0 ? (
+        <StyledButton onClick={() => handleChange(value - 1)}>-</StyledButton>
       ) : (
         <StyledButton disabled>-</StyledButton>
       )}
-      <StyledValue>{counterValue}</StyledValue>
-      <StyledButton onClick={() => setCounterValue(counterValue + 1)}>
-        +
-      </StyledButton>
+      <StyledValue>{value}</StyledValue>
+      <StyledButton onClick={() => handleChange(value + 1)}>+</StyledButton>
     </StyledWrapper>
   );
 };

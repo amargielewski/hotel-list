@@ -38,8 +38,16 @@ export const FilterBox = () => {
         />
       </RatingContainer>
       <FilterCounterContainer>
-        <FilterCounter name="adults" handleChange={handleAdultsChange} />
-        <FilterCounter name="children" handleChange={handleChildrenChange} />
+        <FilterCounter
+          value={state.adults ?? 0}
+          name="adults"
+          handleChange={handleAdultsChange}
+        />
+        <FilterCounter
+          value={state.children ?? 0}
+          name="children"
+          handleChange={handleChildrenChange}
+        />
       </FilterCounterContainer>
       <StyledResetFilterButton onClick={handleResetChange}>
         Reset
