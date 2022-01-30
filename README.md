@@ -1,10 +1,10 @@
 # Hotel List App
 
-## To run app type:
+## Run:
 
 ### ` yarn install & yarn start`
 
-## To build app type:
+## Build:
 
 ### `yarn build`
 
