@@ -33,7 +33,7 @@ export const FilterBox = () => {
           allowHover={false}
           onClick={handleRatingChange}
           ratingValue={state.stars ?? 0}
-          emptyIcon={<StarIcon color="lighray" />}
+          emptyIcon={<StarIcon color="#d3d3d3" />}
           fullIcon={<StarIcon color="#ffbc0b" />}
         />
       </RatingContainer>

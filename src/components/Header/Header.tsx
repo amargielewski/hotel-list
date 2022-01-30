@@ -1,8 +1,6 @@
-import { HeaderWrapper, HeaderLogo } from './Header.styled';
+import { HeaderLogo, HeaderWrapper } from './Header.styled';
 
-type HeaderProps = {};
-
-export const Header = (props: HeaderProps) => {
+export const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderLogo>hotel explorer</HeaderLogo>

@@ -10,11 +10,13 @@ export const StyledWrapper = styled.div`
 
 export const StyledButton = styled.button`
   border: none;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSizes.l}px;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.colors.flame};
-  width: 20px;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   display: flex;
+
+  width: 25px;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
@@ -26,7 +28,7 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledValue = styled(TextMedium)`
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;
 
 export const StyledCounterName = styled(TextMedium)`

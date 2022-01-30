@@ -1,3 +1,4 @@
+import { HeaderLarge } from '../Typography/Typography.styled';
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
@@ -19,13 +20,11 @@ export const HeaderWrapper = styled.div`
   }
 `;
 
-export const HeaderLogo = styled.h2`
-  font-size: 32px;
-  font-weight: 600;
+export const HeaderLogo = styled(HeaderLarge)`
   text-transform: capitalize;
   letter-spacing: 4px;
 
   @media (max-width: 500px) {
-    font-size: 24px;
+    font-size: ${({ theme }) => theme.fontSizes.xl};
   }
 `;
