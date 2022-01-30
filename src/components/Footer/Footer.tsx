@@ -5,9 +5,7 @@ import {
   StyledLink
 } from './Footer.styled';
 
-type FooterProps = {};
-
-export const Footer = (props: FooterProps) => {
+export const Footer = () => {
   return (
     <StyledWrapper>
       <StyledTextContainer>

@@ -17,6 +17,7 @@ export const StyledTextContainer = styled.div`
   color: ${({ theme }) => theme.colors.floral_white};
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px 0;
 `;
 
