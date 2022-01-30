@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { useHotels } from '../api/getHotels';
 import { HotelListBox } from '../components/HotelListBox/HotelListBox';
 import { stateContext } from '../providers/state';
-import { StyledWrapper } from './HotelPage.styled';
+import { StyledWrapper, StyledLoading, StyledError } from './HotelPage.styled';
 
 export const HotelPage = () => {
   const { data, isLoading, error } = useHotels();
@@ -16,6 +16,8 @@ export const HotelPage = () => {
 
   return (
     <StyledWrapper>
+      {isLoading && <StyledLoading>Loading...</StyledLoading>}
+      {error && <StyledError>Sorry, there was an error</StyledError>}
       {filtredData &&
         filtredData?.map((hotel) => (
           <React.Fragment key={hotel.id}>

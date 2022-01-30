@@ -111,6 +111,8 @@ export const HotelListBox = ({
         {filtredData?.length === 0 && (
           <StyledMessage> No rooms matching the criteria</StyledMessage>
         )}
+        {isLoading && <StyledMessage> Loading...</StyledMessage>}
+        {error && <StyledMessage>Sorry, there was an error </StyledMessage>}
       </StyledHotelContainer>
 
       <StyledHotelRoomsContainer>
