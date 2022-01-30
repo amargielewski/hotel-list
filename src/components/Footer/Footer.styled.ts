@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const FooterWrapper = styled.div`
+export const StyledWrapper = styled.div`
   margin-top: 50px;
 
   width: 100%;
-  height: 100px;
+  padding: 20px 0;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -13,10 +13,15 @@ export const FooterWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.rasin_black};
 `;
 
-export const FooterLogo = styled.h2`
-  font-size: 32px;
+export const StyledTextContainer = styled.div`
   color: ${({ theme }) => theme.colors.floral_white};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  text-transform: capitalize;
-  letter-spacing: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+`;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.floral_white};
+  font-size: ${({ theme }) => theme.fontSizes.s}px;
 `;
